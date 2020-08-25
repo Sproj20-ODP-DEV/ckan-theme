@@ -1,0 +1,33 @@
+{% ckan_extends %}
+
+{% block about %}
+
+<style scoped>
+.about-module-content{
+	display:grid;
+	grid-template-columns: repeat(2,1fr);	
+	grid-column-gap:50px;
+}
+
+.about{
+	grid-column:1;
+}
+
+.about-tweets{
+	grid-column:2;
+	height:600px;
+	width:auto;
+	overflow-y:scroll;
+}
+.about-logos{
+	display:inline-block;
+	padding:20px;
+	margin-bottom:20px;
+}
+</style>
+
+<h1 class="page-heading">Open Data Pakistan</h1>
+
+{% snippet 'home/snippets/about_text.html' %}
+
+{% endblock %}
