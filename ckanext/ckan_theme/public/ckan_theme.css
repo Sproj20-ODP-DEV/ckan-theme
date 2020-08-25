@@ -1,0 +1,16 @@
+body{
+	font-family: 'Roboto', sans-serif;
+}
+
+.navbar{
+	background-color: #ffffff;
+}
+.navbar .navbar-toggle{
+	border-color: #ddd;
+}
+.navbar-right > button   { color: #888;
+}
+.masthead .nav > li > a {
+	color:#333;
+	font-size:20px;
+}
