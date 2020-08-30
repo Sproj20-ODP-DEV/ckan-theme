@@ -1,4 +1,15 @@
 {% ckan_extends %}
 {% block header_site_navigation_tabs %}
-{{ h.build_nav_main( ('search',_('Data')), ('organizations_index',_('Organizations')),('home.about',_('About' )))}}
+	{{ h.build_nav_main( ('search',_('Data')), ('organizations_index',_('Organizations')),('home.about',_('About' )))}}
+	<li class="nav-button dropdown">
+        	<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                	Blog
+                	<span class="caret"></span>
+        	</a>
+        	<ul class="dropdown-menu">
+                	<li><a  class="dropdown-item" href="/pages/blog">Blog 0</a></li>
+                	<li><a  class="dropdown-item" href="/pages/blog-1">Blog 1</a></li>
+        	</ul>
+	</li>
+
 {% endblock %}
