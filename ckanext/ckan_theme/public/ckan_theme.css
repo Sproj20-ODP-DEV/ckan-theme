@@ -14,3 +14,7 @@ body{
 	color:#333;
 	font-size:20px;
 }
+
+.dropdown-menu > li > a:hover{
+	color:#ffffff;
+}
