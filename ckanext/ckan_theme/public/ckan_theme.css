@@ -46,4 +46,13 @@ body{
 .dropdown-menu > li > a:hover{
         color:#ffffff;
 }
+.carousel-inner > .item > img{
+	width:100%;
+	height:35vmax;
+}
+.carousel-control > .fa{
+	position:absolute;
+	top:50%;	
+	transform: translateY(50%);
+}
 
