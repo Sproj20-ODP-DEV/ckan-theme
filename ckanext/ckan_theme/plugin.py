@@ -19,7 +19,7 @@ def most_popular_datasets():
     # Make the HTTP request.
     try:
         url = 'http://' + \
-            str(ip_addr) + '/api/3/action/package_search?sort=popularity+desc&rows=4'
+            str(ip_addr) + '/api/3/action/package_search?sort=views_recent+desc&rows=4'
         response = requests.get(url)
 
         assert response.status_code == 200
