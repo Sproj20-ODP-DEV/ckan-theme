@@ -9,6 +9,9 @@ body{
 	background: #ffffff !important;
 }
 
+div , img {
+    max-width: 100%;
+}
 .navbar{
 	background-color: #ffffff;
 }
@@ -80,11 +83,56 @@ body{
 	font-size:35pt;
 	font-weight:bold;
 	color: var(--color-1) !important;
+	margin-bottom: 0px;
 }
 
 .heading-underline {
-    margin-top: 2px;
+    margin: 2px 0 28px;
     border-top: 5px solid var(--color-3);
     width: 90px;
-    margin-bottom: 2em;
+}
+
+.dataset-home-container {
+    max-height: 100%;
+    border: 1px solid #e6e7e8;
+    margin-top: 10px !important;
+}
+
+
+.data-heading-container {
+
+    padding: 1em;
+    background: #f6f6f6;
+    padding-top: 1px;
+    padding-bottom: 1px;
+
+}
+
+.data-heading {
+    color: var(--color-1);
+    font-size: 15pt;
+    font-weight: bold;
+}
+
+.data-description {
+    font-size: 11pt;
+	text-align: justify;
+	font-weight: 500 !important;
+}
+
+.dataset-home {
+    min-height: 8em;
+}
+.dataset-item {
+    border-bottom: 1px dotted #dddddd;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+.data-set-description-home {
+    height: 3em;
+    overflow: hidden !important;
+}
+.data-description {
+    font-size: 11pt;
+    text-align: justify;
 }

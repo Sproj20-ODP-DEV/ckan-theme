@@ -12,10 +12,10 @@
       </div>
     </div>
 </section>{{ super() }}<section>
-  <div class="container content-align-center text-align-center" >
+  <div class="container " >
     <h2 class="homepage-heading main-heading"> Featured Datasets </h2>
     <hr class="heading-underline" align="left">
-    <div class="row_fluid" >
+    <div class="row-fluid" >
       <div class="col-md-6 col-sm-12">
         <div class="dataset-home-container">
           <div class="data-heading-container" >
@@ -32,7 +32,7 @@
                 <div class="data-set-description-home">
                   <div class="data-description">
                     {% if data['notes'] %}
-                    {{ h.markdown_extract(data['notes'], extract_length=200) }}
+                    {{ h.markdown_extract(data['notes']) }}
                     {% else %}
                     {{ _('This dataset has no description') }}
                     {% endif %}
@@ -51,6 +51,8 @@
             {% endfor %}
           </div>
         </div>
+      </div>
+      <div class="col-md-6 col-sm-12">
       </div>
     </div>
   </div>
