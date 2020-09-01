@@ -44,7 +44,7 @@
               <h3><a href="{{h.url_for(controller='package', action='read', id=data['name'])}}">{{data['title']}}</a>
               </h3>
               {% if data['notes'] %}
-              <p>{{ h.markdown_extract(data['notes'], extract_length=100) }}</p>
+              <p>{{ h.markdown_extract(data['notes'], extract_length=200) }}</p>
               {% else %}
               <p>{{ _('This dataset has no description') }}</p>
               {% endif %}
@@ -52,7 +52,7 @@
                 {% for resource in data['resources'] %}
                 <li class="list-inline-item"><a
                     href="{{h.url_for(controller='package', action='read', id=data['name'])}}"
-                    class="label label-default" data-format="{{resource['format']}}">{{resource['format']}}</a></li>
+                    class="label label-default" data-format="{{resource['format'].lower()}}">{{resource['format']}}</a></li>
                 {% endfor %}
               </ul>
             </div>
