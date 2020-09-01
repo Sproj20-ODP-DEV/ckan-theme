@@ -1,5 +1,12 @@
+:root {
+    --color-1: #3e525c;
+    --color-2: #00a1ac;
+	--color-3: #ffa700;
+}
+
 body{
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto', sans-serif !important;
+	background: #ffffff !important;
 }
 
 .navbar{
@@ -69,3 +76,15 @@ body{
 	transform: translateY(50%);
 }
 
+.main-heading{
+	font-size:35pt;
+	font-weight:bold;
+	color: var(--color-1) !important;
+}
+
+.heading-underline {
+    margin-top: 2px;
+    border-top: 5px solid var(--color-3);
+    width: 90px;
+    margin-bottom: 2em;
+}
