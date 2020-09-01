@@ -68,4 +68,11 @@ body{
 	top:50%;	
 	transform: translateY(50%);
 }
-
+.popular-datasets-table{
+	width: 40px;
+	float: right;
+	position: relative;
+	min-height: 1px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
