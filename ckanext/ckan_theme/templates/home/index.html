@@ -29,7 +29,7 @@
 <!-- comments by hussnain put the section block under this line see the carousal section and odp page for reference -->
 
 <!-- wrapper for popular dataset -->
-<section>
+<!-- <section>
   <div class="popular-datasets-table col2">
     <div class="module-content box">
     <h2>Popular Datasets</h2>
@@ -45,6 +45,34 @@
     </ul>
     {% endfor %}
     </div>
+  </div>
+</section> -->
+<section id="popular_dataset">
+  <div class="container">
+      <h1 id="pd_h">Featured Dataset</h1>
+      <div class="row pd_row">
+          <div class="col-6 text-left">
+              <div class="pd_heading">
+                  <h2>Popular Dataset</h2>
+                  <p>Most Viewed Popular Dataset</p>
+              </div>
+              {% for data in h.ckan_theme_most_popular_datasets() %}
+              <div class="pd_datasets">
+                  <div class="row">
+                      <div class="col">
+                          <h3><a href="/dataset/{{data['name']}}">{{data['title']}}</a></h3>
+                          <p>{{data['notes']}}</p>
+                          <ul class="list-inline">
+                            {% for resource in data['resources'] %}
+                              <li class="list-inline-item"><a href="/dataset/{{data['name']}}" data-format="{{resource['format']}}">{{resource['format']}}</a></li>
+                            {% endfor %}
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+              {% endfor %}
+          </div>
+      </div>
   </div>
 </section>
 

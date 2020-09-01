@@ -68,11 +68,41 @@ body{
 	top:50%;	
 	transform: translateY(50%);
 }
-.popular-datasets-table{
-	width: 40px;
-	float: right;
-	position: relative;
-	min-height: 1px;
-	padding-left: 15px;
-	padding-right: 15px;
+#popular_dataset .list-inline-item {
+	background-color: #888888;
+	border-radius: 6px;
+	padding: 3px;
+  }
+  
+#popular_dataset .pd_heading {
+	background-color: #888888;
+	padding: 15px;
+	/* border-radius: 10px; */
 }
+  
+#popular_dataset .pd_datasets {
+	background-color: #f2e9e9;
+	border-bottom: 26px;
+	border-color: #000000;
+	padding-left: 30px;
+	padding-right: 30px;
+	border-width: 20px;
+	padding-bottom: 20px;
+}
+  
+#pd_h {
+	padding-bottom: 35px;
+	padding-top: 15px;
+	font-size: 45px;
+}
+#popular_dataset .col-6 {
+	-ms-flex: 0 0 50%;
+	flex: 0 0 50%;
+	max-width: 50%;
+}
+#popular_dataset .pd_row {
+	padding-bottom: 30px;
+}
+  
+  
+  
