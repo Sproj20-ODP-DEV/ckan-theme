@@ -1,7 +1,17 @@
-body{
-	font-family: 'Roboto', sans-serif;
+:root {
+    --color-1: #3e525c;
+    --color-2: #00a1ac;
+	--color-3: #ffa700;
 }
 
+body{
+	font-family: 'Roboto', sans-serif !important;
+	background: #ffffff !important;
+}
+
+div , img {
+    max-width: 100%;
+}
 .navbar{
 	background-color: #ffffff;
 }
@@ -69,3 +79,64 @@ body{
 	transform: translateY(50%);
 }
 
+.main-heading{
+	font-size:35pt;
+	font-weight:bold;
+	color: var(--color-1) !important;
+	margin-bottom: 0px;
+}
+
+.heading-underline {
+    margin: 2px 0 28px;
+    border-top: 5px solid var(--color-3);
+    width: 90px;
+}
+
+.dataset-home-container {
+    max-height: 100%;
+    border: 1px solid #e6e7e8;
+    margin-top: 10px !important;
+}
+
+
+.data-heading-container {
+
+    padding: 1em;
+    background: #f6f6f6;
+    padding-top: 1px;
+    padding-bottom: 1px;
+
+}
+
+.data-heading {
+    color: var(--color-1);
+    font-size: 15pt;
+    font-weight: bold;
+}
+
+.data-description {
+    font-size: 11pt;
+	text-align: justify;
+	font-weight: 500 !important;
+}
+
+.dataset-home {
+    min-height: 8em;
+}
+.dataset-item {
+    border-bottom: 1px dotted #dddddd;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+.data-set-description-home {
+    height: 3em;
+    overflow: hidden !important;
+}
+.data-description {
+    font-size: 11pt;
+    text-align: justify;
+}
+
+#popular-section{
+	margin-bottom: 5em;
+}
