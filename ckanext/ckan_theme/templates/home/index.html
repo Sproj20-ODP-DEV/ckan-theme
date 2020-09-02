@@ -1,4 +1,6 @@
-{% ckan_extends %}{% block primary_content %}<section>
+{% ckan_extends %}
+{% block primary_content %}
+<section>
   <div class='slider-container'>
     <div id='odp-main-slider' class='carousel slide' data-ride='carousel'>
       <!-- wrapper for slides -->
@@ -11,7 +13,9 @@
           data-slide="next"> <span class="fa fa-angle-double-right"></span> </a>
       </div>
     </div>
-</section>{{ super() }}<section>
+</section>
+{{ super() }}
+<section id="popular-section">
   <div class="container " >
     <h2 class="homepage-heading main-heading"> Featured Datasets </h2>
     <hr class="heading-underline" align="left">
