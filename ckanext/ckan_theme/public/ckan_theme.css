@@ -162,7 +162,8 @@ div , img {
 
 .search-heading {
     color: var(--color-2) !important;
-    font-weight: bold;
+	font-weight: bold;
+	font-size: 24px !important; 
 }
 
 
