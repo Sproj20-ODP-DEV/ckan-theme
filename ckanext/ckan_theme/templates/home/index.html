@@ -14,7 +14,15 @@
       </div>
     </div>
 </section>
-{{ super() }}
+<section id="homepage-search"> 
+    <div class="container">
+      <div align="center"> 
+          {% block search %}
+            {% snippet 'home/snippets/search.html' %}
+		  {% endblock %}
+		</div>
+      </div>
+</section>
 <section id="popular-section">
   <div class="container " >
     <h2 class="homepage-heading main-heading"> Featured Datasets </h2>
@@ -32,7 +40,7 @@
               <div class="dataset-content">
                 <h4 class="homepage-heading data-heading">
                   <a href="{{h.url_for(controller='package', action='read', id=data['name'])}}">{{data['title']}}</a>
-                </h4> <!-- <h5 class="pull-right"> Last Updated: 2020-09-01</h5> -->
+                </h4> 
                 <div class="data-set-description-home">
                   <div class="data-description">
                     {% if data['notes'] %}

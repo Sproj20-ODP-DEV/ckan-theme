@@ -140,3 +140,40 @@ div , img {
 #popular-section{
 	margin-bottom: 5em;
 }
+
+
+#homepage-search{
+	background-color: #eee !important;
+}
+
+
+.container-search-main{
+	width: 50em !important;
+}
+
+.search-form {
+	border: none !important;
+}
+
+.module-content .search-form {
+    padding: 0 !important;
+}
+
+
+.search-heading {
+    color: var(--color-2) !important;
+	font-weight: bold;
+	font-size: 24px !important; 
+}
+
+
+.search-form .search-input input {
+    background: url('https://opendata.com.pk/images/transparentbar.png');
+    background-size: cover;
+    border-radius: 17px;
+    border-color: var(--color-1);
+}
+
+.fa.fa-search {
+    color: var(--color-1); !important
+}
