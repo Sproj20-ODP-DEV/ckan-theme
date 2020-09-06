@@ -63,7 +63,7 @@ div , img {
 .nav-button-footer{
 	font-size:20px;
 }
-.site-footer .nav > li > a:hover{
+.site-footer .nav > li > a:hover,.site-footer .nav > li > a:focus {
         color:#000000;
 }
 .site-footer{
@@ -155,10 +155,9 @@ div , img {
 	border: none !important;
 }
 
-.module-content .search-form {
+.module-content.search-form {
     padding: 0 !important;
 }
-
 
 .search-heading {
     color: var(--color-2) !important;
