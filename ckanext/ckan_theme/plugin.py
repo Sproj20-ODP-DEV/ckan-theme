@@ -29,6 +29,8 @@ def most_popular_datasets():
 
     return results
 
+def dummy():
+    return ckan.plugins.toolkit.get_endpoint
 
 class Ckan_ThemePlugin(plugins.SingletonPlugin):
 
@@ -36,6 +38,8 @@ class Ckan_ThemePlugin(plugins.SingletonPlugin):
     plugins.implements(plugins.IConfigurer)
     # Declare that this plugin will implement ITemplateHelpers.
     plugins.implements(plugins.ITemplateHelpers)
+    #IRoutes
+    plugins.implements(plugins.IRoutes, inherit=True)
 
     def update_config(self, config_):
         toolkit.add_template_directory(config_, 'templates')
@@ -49,4 +53,8 @@ class Ckan_ThemePlugin(plugins.SingletonPlugin):
         # Template helper function names should begin with the name of the
         # extension they belong to, to avoid clashing with functions from
         # other extensions.
-        return {'most_popular_datasets': most_popular_datasets}
+        return {
+            'most_popular_datasets': most_popular_datasets,
+            'dummy'                : dummy    
+                
+            }
