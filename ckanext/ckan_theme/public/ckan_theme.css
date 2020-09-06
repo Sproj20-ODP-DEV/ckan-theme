@@ -63,7 +63,7 @@ div , img {
 .nav-button-footer{
 	font-size:20px;
 }
-.site-footer .nav > li > a:hover{
+.site-footer .nav > li > a:hover,.site-footer .nav > li > a:focus {
         color:#000000;
 }
 .site-footer{
