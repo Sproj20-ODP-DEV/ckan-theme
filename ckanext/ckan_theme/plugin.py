@@ -1,6 +1,11 @@
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
-from ckan.lib.helpers import url_for
+from ckan.lib.helpers import url_for,facets
+import ckan.lib.helpers as h
+import ckan.plugins as p
+from ckan.common import c
+import ckan.lib
+
 
 import requests
 import json
@@ -29,8 +34,6 @@ def most_popular_datasets():
 
     return results
 
-def dummy():
-    return ckan.plugins.toolkit.get_endpoint
 
 class Ckan_ThemePlugin(plugins.SingletonPlugin):
 
@@ -40,6 +43,18 @@ class Ckan_ThemePlugin(plugins.SingletonPlugin):
     plugins.implements(plugins.ITemplateHelpers)
     #IRoutes
     plugins.implements(plugins.IRoutes, inherit=True)
+    #IFacets
+    plugins.implements(plugins.IFacets)
+
+    def dataset_facets(self, facets_dict, package_type):
+        del facets_dict['groups']
+        del facets_dict['license_id']
+
+        return facets_dict
+    
+    def organization_facets(self,facets_dict, organization_type, package_type):
+        return facets_dict
+
 
     def update_config(self, config_):
         toolkit.add_template_directory(config_, 'templates')
@@ -54,7 +69,5 @@ class Ckan_ThemePlugin(plugins.SingletonPlugin):
         # extension they belong to, to avoid clashing with functions from
         # other extensions.
         return {
-            'most_popular_datasets': most_popular_datasets,
-            'dummy'                : dummy    
-                
+            'most_popular_datasets': most_popular_datasets,                
             }
