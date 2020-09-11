@@ -2,7 +2,7 @@
 {% set placeholder = _('Search Open Data Pakistan') %}
 
 <div class="container-search-main">
-  <form class="module-content search-form" method="get" action="{% url_for 'dataset.search' %}">
+  <form class="module-content search-form" method="get" action="{% url_for 'dataset' %}">
     <h3 class="search-heading">{{ _("Find, Explore and Reuse Pakistan's Open Data") }}</h3>
     <div class="search-input form-group search-giant">
       <input aria-label="{% block header_site_search_label %}{{ _('Search datasets') }}{% endblock %}" id="field-main-search" type="text" class="form-control" name="q" value="" autocomplete="off" placeholder="{% block search_placeholder %}{{ placeholder }}{% endblock %}" />
