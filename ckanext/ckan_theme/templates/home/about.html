@@ -1,10 +1,12 @@
 {% ckan_extends %}
 
-{% block about %}
+{% block primary %}
 
 
-<h1 class="page-heading">Open Data Pakistan</h1>
-
-{% snippet 'home/snippets/about_text.html' %}
+<div class="container">
+    <div class="row-fluid">
+        {% snippet 'home/snippets/about_text.html' %}
+    </div>
+</div>
 
 {% endblock %}
