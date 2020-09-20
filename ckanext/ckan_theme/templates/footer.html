@@ -1,0 +1,29 @@
+<footer class="site-footer">
+  <div class="container">
+    {% block footer_content %}
+    <div class="row">
+      <ul class="nav navbar-nav navbar-options">
+      	<li class="nav-button-footer">
+		<a href="/dataset">{{_('Data')}}</a>
+	</li>
+	<li class="nav-button-footer">
+                <a href="/organization">{{_('Organizations')}}</a>
+        </li>
+	<li class="nav-button-footer">
+                <a href="/about">{{_('About')}}</a>
+        </li>
+	<li class="nav-button-footer dropup">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Blog
+                    <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+                    <li><a  class="dropdown-item" href="{{h.url_for('/pages/blog',_external=True)}}">Blog 0</a></li>
+                    <li><a  class="dropdown-item" href="{{h.url_for('/pages/blog-1',_external=True)}}">Blog 1</a></li>
+            </ul>
+	</li>
+      </ul>
+    </div>
+    {% endblock %}
+  </div>
+</footer>
