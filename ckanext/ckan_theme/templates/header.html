@@ -21,12 +21,12 @@
 			<li class="nav-button dropdown">
 				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
 					aria-haspopup="true" aria-expanded="false">
-					More
+					{{_('More')}}
 					<span class="caret"></span>
 				</a>
 				<ul class="dropdown-menu">
-					<li><a class="dropdown-item" href="{{h.url_for('/pages',_external=True)}}">Pages</a></li>
-					<li><a class="dropdown-item" href="{{h.url_for('/blog',_external=True)}}">Blogs</a></li>
+					<li><a class="dropdown-item" href="{{h.url_for('/pages',_external=True)}}">{{_('Pages')}}</a></li>
+					<li><a class="dropdown-item" href="{{h.url_for('/blog',_external=True)}}">{{_('Blogs')}}</a></li>
 				</ul>
 			</li>
 
