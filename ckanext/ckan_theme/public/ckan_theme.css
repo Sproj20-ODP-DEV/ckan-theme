@@ -1,7 +1,9 @@
 :root {
     --color-1: #3e525c;
     --color-2: #00a1ac;
-	--color-3: #ffa700;
+    --color-3: #ffa700;
+    --default-filter: brightness(0) saturate(100%) invert(31%) sepia(12%) saturate(868%) hue-rotate(156deg) brightness(93%) contrast(92%) !important;
+    --hover-filter: invert(50%) sepia(65%) saturate(5930%) hue-rotate(158deg) brightness(100%) contrast(103%) !important;
 }
 
 body{
@@ -184,7 +186,7 @@ div , img {
 }
 
 .fa.fa-search {
-    color: var(--color-1); !important
+    color: var(--color-1) !important; 
 }
 
 .facet-container{
@@ -233,8 +235,18 @@ div , img {
 }
 
 .homepage-category-text {
-    color: var(--color-1) !important;
+    filter: var(--default-filter) !important;
     text-decoration: none !important;
+}
+.homepage-category-text:hover * {
+    text-decoration: none !important;
+    filter: var(--hover-filter) !important;
+}
+
+.category-image{
+    margin-top: 5px;
+    width: 8em;
+    height: 8em;
 }
 .category-name {
     max-width: 9em !important;
