@@ -1,19 +1,22 @@
-{% set categories=['Health','Economy&Finance','Demography','Environment&Energy','Public-Safety','Education',
-'Government&Public-Sector','Agriculture&Food','Forests','Cities&Regions','Connectivity',
-'Housing&Public-Sector','Culture','Manufacturing','Science&Technology'] %}
+{% set categories=['Health',"Economy & Finance",'Demography','Environment & Energy','Public Safety','Education',
+'Government & Public Sector','Agriculture, Food & Forests','Cities & Regions','Connectivity',
+'Housing & Public Sector','Culture','Manufecturing','Science & Technology'] %}
 
 <div class="container facet-container">
-        <div class="categories-container">
-            {% for category in categories %}
-                <div class="category-item">
-                        <div class="category-thumbnail thumbnail">
-                            <a class="homepage-category-text" href="/dataset?custom_category={{category}}">
+    <div class="categories-container">
+        {% for category in categories %}
+        <div class="category-item">
 
-                                <div class="category-name" align="center">{{category}}</div>
-                            </a>
-                        </div>
-                </div>
-            {% endfor %}
-            
-        </div>    
+            <div class="category-thumbnail thumbnail">
+                <a class="homepage-category-text" href="/dataset?category={{category|urlencode}}">
+                    <img class="category-image img-fluid" src="/images/{{category|replace('&','_')|replace(',','_')|replace(' ','')|lower}}.png" >
+                    <div class="category-name" align="center"> {{category}}</div>
+
+                </a>
+            </div>
+
+        </div>
+        {% endfor %}
+
+    </div>
 </div>
