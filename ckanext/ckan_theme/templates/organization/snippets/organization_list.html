@@ -1,0 +1,16 @@
+{% ckan_extends %}
+{% block organization_list %}
+
+{% set orgs = h.get_orgs() %}
+<ul class='list-unstyled'>
+    {% for org in orgs %}
+    <li>
+        <h4>
+            <a class='dataset-heading' href="{{h.url_for(controller='organization',action='read',id=org)}}">{{org.upper()}}</a>
+        </h4>
+    </li>
+    <hr>
+
+    {% endfor %}
+</ul>
+{% endblock %}
