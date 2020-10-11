@@ -1,0 +1,20 @@
+{% ckan_extends %}
+
+{% block page_primary_action %}
+{% if h.check_access('organization_create') %} 
+{% link_for _('Add Organization'), controller='organization', action='new', class_='btn btn-primary', icon='plus-square', named_route=group_type + '_new',style="margin-bottom :15px" %}
+{% else %}
+<div style="display: flex;align-content: space-around;justify-content: space-between;">
+    <div>
+      <h4> Please register your organization to add datasets. </h4>
+    </div>
+    <div>
+      <a style="margin-bottom :15px" class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLScw8OGeR6ZbUGcxjJ-nl9JQpXmHuUu0e52P0cqlKQKy9Ty_vg/viewform" target="_blank">
+          <i class="fa fa-sitemap"></i>
+          Register Your Organization
+      </a>
+    </div>
+    </div>
+    {% endif %}
+{% endblock %}  
+{% block secondary %}{% endblock %}

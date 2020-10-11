@@ -5,11 +5,25 @@ import ckan.lib.helpers as h
 import ckan.plugins as p
 from ckan.common import c
 import ckan.lib
+from ckan.logic import get_action
 
 
 import requests
 import json
 
+def get_orgs():
+    '''
+    A function to get the list of all the orgs
+    '''
+    try:
+        url = url_for('api.action',ver=3,logic_function='organization_list',_external=True);
+        response = requests.get(url)
+        
+        assert response.status_code == 200
+    except:
+        raise Exception("No Organizations to show")
+    
+    return response.json()['result']
 
 def most_popular_datasets():
     '''
@@ -69,5 +83,6 @@ class Ckan_ThemePlugin(plugins.SingletonPlugin):
         # extension they belong to, to avoid clashing with functions from
         # other extensions.
         return {
-            'most_popular_datasets': most_popular_datasets,                
+            'most_popular_datasets': most_popular_datasets,
+            'get_orgs':get_orgs                
             }
