@@ -2,7 +2,7 @@
     --color-1: #3e525c;
     --color-2: #00a1ac;
     --color-3: #ffa700;
-    --default-filter: brightness(0) saturate(100%) invert(31%) sepia(12%) saturate(868%) hue-rotate(156deg) brightness(93%) contrast(92%) !important;
+    --default-filter: brightness(0%) saturate(100%) invert(31%) sepia(12%) saturate(868%) hue-rotate(156deg) contrast(92%) !important;
     --hover-filter: invert(50%) sepia(65%) saturate(5930%) hue-rotate(158deg) brightness(100%) contrast(103%) !important;
 }
 
@@ -239,8 +239,12 @@ a{
 }
 
 .homepage-category-text {
-    filter: var(--default-filter) !important;
+    filter:var(--default-filter);
     text-decoration: none !important;
+    
+}
+.homepage-category-text > img{
+    filter:var(--default-filter);
 }
 .homepage-category-text:hover * {
     text-decoration: none !important;
@@ -251,6 +255,7 @@ a{
     margin-top: 5px;
     width: 8em;
     height: 8em;
+    
 }
 .category-name {
     max-width: 9em !important;
