@@ -1,4 +1,8 @@
 {% ckan_extends %}
+{% block styles %}
+{{ super() }}
+<link rel="stylesheet" href="/organization.css"/>
+{% endblock %}
 
 {% block page_primary_action %}
 {% if h.check_access('organization_create') %} 
@@ -16,6 +20,7 @@
     </div>
     </div>
     {% endif %}
-{% endblock %}  
+{% endblock %} 
 {% block secondary %}
 {% endblock %}
+
