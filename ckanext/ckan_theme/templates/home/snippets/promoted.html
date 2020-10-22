@@ -1,0 +1,21 @@
+{% set intro = g.site_intro_text %}
+
+<div class="module-content box">
+  <div>
+    {% if intro %}
+    <h1 class="page-heading">  {{ h.render_markdown(intro) }}</h1>
+    {% else %}
+      <h1 class="page-heading">{{ _("Welcome to OpenData Pakistan") }}</h1>
+    {% endif %}
+  </div>
+  {%block home_image %}
+	<section class="featured media-overlay hidden-xs">
+	{% block home_image_content %}
+		<a class="media-image" href="#">
+    		<img src="https://opendata.com.pk/images/banner-3.png" alt="Featured image"
+         	width="420" height="220" />
+  		</a>
+	{% endblock %}
+	</section>
+  {% endblock %}
+</div>

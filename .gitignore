@@ -40,3 +40,9 @@ coverage.xml
 
 # Sphinx documentation
 docs/_build/
+
+#Swap files
+*.swp
+
+
+settings.json

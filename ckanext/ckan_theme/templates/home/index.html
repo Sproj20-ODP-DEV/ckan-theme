@@ -1,0 +1,76 @@
+{% ckan_extends %}
+{% block primary_content %}
+<section>
+  <div class='slider-container'>
+    <div id='odp-main-slider' class='carousel slide' data-ride='carousel'>
+      <!-- wrapper for slides -->
+      <div class='carousel-inner'>
+        <div class='active item'> <img src='https://treelogic.com/en/assets/images/data-science-1400x933.jpg' /> </div>
+        <div class='item'> <img
+            src='https://res.cloudinary.com/springboard-images/image/upload/q_auto,f_auto,fl_lossy/wordpress/2015/10/DataScienceContentBanner.png' />
+        </div> <a class="carousel-control left" href="#odp-main-slider" data-slide="prev"> <span
+            class="fa fa-angle-double-left"></span> </a> <a class="carousel-control right" href="#odp-main-slider"
+          data-slide="next"> <span class="fa fa-angle-double-right"></span> </a>
+      </div>
+    </div>
+</section>
+<section id="homepage-search"> 
+    <div class="container">
+      <div align="center"> 
+          {% block search %}
+            {% snippet 'home/snippets/search.html' %}
+		  {% endblock %}
+		</div>
+      </div>
+</section>
+<section id='facets'>
+  {{ h.snippet('home/section_snips/facets.html') }}
+</section>
+<section id="popular-section">
+  <div class="container " >
+    <h2 class="homepage-heading main-heading"> Featured Datasets </h2>
+    <hr class="heading-underline" align="left">
+    <div class="row-fluid" >
+      <div class="col-md-6 col-sm-12">
+        <div class="dataset-home-container">
+          <div class="data-heading-container" >
+            <h3 class="data-heading"> Popular Datasets</h3>
+            <h3 class="data-description"> Most Popluar datasets</h3>
+          </div>
+          <div class="container">
+            {% for data in h.most_popular_datasets() %}
+            <div class="dataset-home dataset-item">
+              <div class="dataset-content">
+                <h4 class="homepage-heading data-heading">
+                  <a href="{{h.url_for(controller='package', action='read', id=data['name'])}}">{{data['title']}}</a>
+                </h4> 
+                <div class="data-set-description-home">
+                  <div class="data-description">
+                    {% if data['notes'] %}
+                    {{ h.markdown_extract(data['notes']) }}
+                    {% else %}
+                    {{ _('This dataset has no description') }}
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+              <ul class="dataset-resources list-unstyled">
+                {% for resource in data['resources'] %}
+                <li>
+                  <a href="{{h.url_for(controller='package', action='read', id=data['name'])}}"
+                    class="label label-default" data-format="{{resource['format'].lower()}}">{{resource['format']}}</a>
+                </li>
+                {% endfor %}
+              </ul>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-12">
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

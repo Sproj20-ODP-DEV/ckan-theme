@@ -1,0 +1,39 @@
+{% ckan_extends %}
+<div class="collapse navbar-collapse" id="main-navigation-toggle">
+	{% block header_site_navigation %}
+	<nav class="section navigation">
+		<ul class="nav nav-pills">
+			{% block header_site_navigation_tabs %}
+			<li class="nav-button">
+				<a class="nav-link" href="{{h.url_for('/dataset')}}">{{_('Data')}}</a>
+			</li>
+			<li class="nav-button">
+				<a class="nav-link" href="{{h.url_for('/organization')}}">{{_('Organizations')}}</a>
+			</li>
+			<li class="nav-button">
+				<a class="nav-link" href="{{h.url_for('/about')}}">{{_('About')}}</a>
+			</li>
+			<li class="nav-button">
+				<a class="nav-link"
+					href="{{h.url_for(controller='ckanext.showcase.controller:ShowcaseController',action='search')}}">Showcase</a>
+			</li>
+
+			<li class="nav-button dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+					aria-haspopup="true" aria-expanded="false">
+					{{_('More')}}
+					<span class="caret"></span>
+				</a>
+				<ul class="dropdown-menu">
+					<li><a class="dropdown-item" href="{{h.url_for('/pages',_external=True)}}">{{_('Pages')}}</a></li>
+					<li><a class="dropdown-item" href="{{h.url_for('/blog',_external=True)}}">{{_('Blogs')}}</a></li>
+				</ul>
+			</li>
+
+			{% endblock %}
+		</ul>
+	</nav>
+	{% endblock %}
+	{% block header_site_search %}
+	{% endblock %}
+</div>
